@@ -1,0 +1,6 @@
+{
+	"token": "bot token here",
+	"log_channel": "log channel id here",
+	"bot_owner": "bot owner id here",
+	"trusted_user":["trusted","user","ids","here"]
+}

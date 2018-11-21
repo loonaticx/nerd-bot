@@ -1,0 +1,15 @@
+
+*.xml
+*.iml
+*.sqlite
+
+.vs/*
+.idea/*
+config.json
+.vs/trickymuffin/v15/.suo
+.vs/config/applicationhost.config
+*.css
+*.html
+*.info
+node_modules/*
+package-lock.json

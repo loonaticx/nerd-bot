@@ -9,23 +9,21 @@ client.on('ready', () => {
     client.channels.get(config.log_channel).send('```cmd\nConnected as: ' + client.user.username + '\nBot ID: ' + client.user.id + '```');
 });
 
-var count = 0;
-
 var joke = ["tellmeajoke", "tellmejoke", "tellmeagoodjoke"];
 
-var imagetypes = [undefined, 'jokes'];
+var jtypes = [undefined, 'jokes'];
 
 client.on('message', async function(message) {
 
     if (message.author.id !== client.user.id) {
 
-        var send = (imagetype, options) => {
-            if (imagetype) {
-                stats[imagetypes[imagetype]]++;
-
+        var send = (joketype, options) => {
+            if (joketype) {
+                stats[jtypes[joketype]]++;
                 require('fs').writeFileSync('./databases/stats.json', JSON.stringify(stats));
-                var list = jokeList[imagetypes[imagetype]];
-                var listLength = list.length;
+
+                var list = jokeList[jtypes[joketype]];
+
                 var file = list[Math.floor(Math.random() * list.length)];
                 options = file;
             }
@@ -37,7 +35,7 @@ client.on('message', async function(message) {
         };
 
         var trusted = false;
-
+        
         if (message.author.id === config.bot_owner || config.trusted_user.indexOf(message.author.id) + 1)
             trusted = true;
 

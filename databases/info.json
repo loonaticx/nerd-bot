@@ -1,0 +1,12 @@
+{
+  "wip": [
+    "Nerd Bot. \n",
+    "Personal JavaScript bot I (loonatic#1337) made for Discord. \n",
+    "To Do: \n",
+    "- First: Make a better damn info box. Why the hell is JSON being used for this? \n",
+    "- Implement pictures of computer setups for *show me a setup*, *show me your setup* \n",
+    "- Instead of giving a constant name, Erica, the bot should mention the user (who triggered the bot response) instead. \n",
+    "*What does Erica do when her laptop computer freezes? \nShe sticks it in the microwave!*, --> What does <user> do when their laptop computer freezes? \nThey stick it in the microwave!, \n",
+    "- Other than that, find better and less suggestive / more appropriate jokes. Computer joke websites aren't nice sometimes. \n"
+  ]
+}

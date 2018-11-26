@@ -2,7 +2,9 @@ var Discord = require('discord.js'),
     client = new Discord.Client(),
     jokeList = require('./databases/jokes.json'),
     stats = require('./databases/stats.json'),
+    info = require('./databases/info.json'),
     config = require('./config.json');
+
 
 client.on('ready', () => {
     console.log('Connected as: ' + client.user.username + '\nBot ID: ' + client.user.id);
@@ -35,7 +37,7 @@ client.on('message', async function(message) {
         };
 
         var trusted = false;
-        
+
         if (message.author.id === config.bot_owner || config.trusted_user.indexOf(message.author.id) + 1)
             trusted = true;
 
@@ -54,6 +56,9 @@ client.on('message', async function(message) {
 
             else if (mc === 'count')
                 send(0, `Number of jokes loaded: ${'jokes'.length}`);
+
+            else if (mc === 'give me some info you dumb bot')
+                send(0, `${info.wip}`);
 
             else if (mc === 'reboot' && trusted)
                 send(0, 'rebooting...').then(() => process.exit(0));

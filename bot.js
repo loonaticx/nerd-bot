@@ -12,6 +12,8 @@ client.on('ready', () => {
 });
 
 var joke = ["tellmeajoke", "tellmejoke", "tellmeagoodjoke"];
+var image = ["showmesexypcpics", "showmecomputerpics"];
+
 
 var jtypes = [undefined, 'jokes'];
 
